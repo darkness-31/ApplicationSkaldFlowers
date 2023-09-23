@@ -8,9 +8,9 @@ IDE: :purple_heart: _**Visual Studio 2022**_ \
 
 
 Список
-> - [x] [Задание 1](https://github.com/darkness-31/ApplicationSkaldFlowers/edit/main/README.md#задание-1---git)
-> - [ ] [Задание 2](https://github.com/darkness-31/ApplicationSkaldFlowers/edit/main/README.md#задание-2---авторизация)
-> - [ ] [Задание 3](https://github.com/darkness-31/ApplicationSkaldFlowers/edit/main/README.md#задание-3---?)
+> - [x] [Задание 1](#задание-1---git)
+> - [ ] [Задание 2](#задание-2---авторизация)
+> - [ ] [Задание 3](#задание-3---?)
 
 
 ## Задание 1 - **Git**
