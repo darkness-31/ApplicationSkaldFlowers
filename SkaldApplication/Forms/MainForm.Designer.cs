@@ -41,8 +41,11 @@
             this.ButtonAccounts = new System.Windows.Forms.Button();
             this.ButtonSales = new System.Windows.Forms.Button();
             this.ButtonPurchase = new System.Windows.Forms.Button();
+            this.TabsControl = new System.Windows.Forms.TabControl();
+            this.ButtonCloseTab = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).BeginInit();
             this.SplitContainer.Panel1.SuspendLayout();
+            this.SplitContainer.Panel2.SuspendLayout();
             this.SplitContainer.SuspendLayout();
             this.FlowLayoutPanelAccounts.SuspendLayout();
             this.FlowLayoutPanelMenu.SuspendLayout();
@@ -58,9 +61,15 @@
             // 
             this.SplitContainer.Panel1.Controls.Add(this.FlowLayoutPanelAccounts);
             this.SplitContainer.Panel1.Controls.Add(this.FlowLayoutPanelMenu);
+            // 
+            // SplitContainer.Panel2
+            // 
+            this.SplitContainer.Panel2.Controls.Add(this.ButtonCloseTab);
+            this.SplitContainer.Panel2.Controls.Add(this.TabsControl);
             this.SplitContainer.Size = new System.Drawing.Size(686, 450);
             this.SplitContainer.SplitterDistance = 108;
             this.SplitContainer.TabIndex = 0;
+            this.SplitContainer.TabStop = false;
             // 
             // FlowLayoutPanelAccounts
             // 
@@ -92,7 +101,7 @@
             this.ButtonAccountEnter.Location = new System.Drawing.Point(3, 16);
             this.ButtonAccountEnter.Name = "ButtonAccountEnter";
             this.ButtonAccountEnter.Size = new System.Drawing.Size(93, 29);
-            this.ButtonAccountEnter.TabIndex = 0;
+            this.ButtonAccountEnter.TabIndex = 1;
             this.ButtonAccountEnter.Text = "Войти";
             this.ButtonAccountEnter.UseVisualStyleBackColor = true;
             this.ButtonAccountEnter.Click += new System.EventHandler(this.ButtonAccountEnter_Click);
@@ -102,9 +111,10 @@
             this.ButtonAccountRegistration.Location = new System.Drawing.Point(3, 51);
             this.ButtonAccountRegistration.Name = "ButtonAccountRegistration";
             this.ButtonAccountRegistration.Size = new System.Drawing.Size(93, 29);
-            this.ButtonAccountRegistration.TabIndex = 0;
+            this.ButtonAccountRegistration.TabIndex = 2;
             this.ButtonAccountRegistration.Text = "Регистрация";
             this.ButtonAccountRegistration.UseVisualStyleBackColor = true;
+            this.ButtonAccountRegistration.Click += new System.EventHandler(this.ButtonAccountRegistration_Click);
             // 
             // ButtonAccountExit
             // 
@@ -137,7 +147,7 @@
             this.ButtonStock.Location = new System.Drawing.Point(3, 3);
             this.ButtonStock.Name = "ButtonStock";
             this.ButtonStock.Size = new System.Drawing.Size(93, 29);
-            this.ButtonStock.TabIndex = 0;
+            this.ButtonStock.TabIndex = 3;
             this.ButtonStock.Text = "Склад";
             this.ButtonStock.UseVisualStyleBackColor = true;
             this.ButtonStock.Visible = false;
@@ -147,7 +157,7 @@
             this.ButtonMaterials.Location = new System.Drawing.Point(3, 38);
             this.ButtonMaterials.Name = "ButtonMaterials";
             this.ButtonMaterials.Size = new System.Drawing.Size(93, 29);
-            this.ButtonMaterials.TabIndex = 0;
+            this.ButtonMaterials.TabIndex = 4;
             this.ButtonMaterials.Text = "Материалы";
             this.ButtonMaterials.UseVisualStyleBackColor = true;
             this.ButtonMaterials.Visible = false;
@@ -157,7 +167,7 @@
             this.ButtonPersons.Location = new System.Drawing.Point(3, 73);
             this.ButtonPersons.Name = "ButtonPersons";
             this.ButtonPersons.Size = new System.Drawing.Size(93, 29);
-            this.ButtonPersons.TabIndex = 0;
+            this.ButtonPersons.TabIndex = 5;
             this.ButtonPersons.Text = "Люди";
             this.ButtonPersons.UseVisualStyleBackColor = true;
             this.ButtonPersons.Visible = false;
@@ -167,7 +177,7 @@
             this.ButtonAccounts.Location = new System.Drawing.Point(3, 108);
             this.ButtonAccounts.Name = "ButtonAccounts";
             this.ButtonAccounts.Size = new System.Drawing.Size(93, 29);
-            this.ButtonAccounts.TabIndex = 0;
+            this.ButtonAccounts.TabIndex = 6;
             this.ButtonAccounts.Text = "Аккаунты";
             this.ButtonAccounts.UseVisualStyleBackColor = true;
             this.ButtonAccounts.Visible = false;
@@ -177,7 +187,7 @@
             this.ButtonSales.Location = new System.Drawing.Point(3, 143);
             this.ButtonSales.Name = "ButtonSales";
             this.ButtonSales.Size = new System.Drawing.Size(93, 29);
-            this.ButtonSales.TabIndex = 0;
+            this.ButtonSales.TabIndex = 7;
             this.ButtonSales.Text = "Продажи";
             this.ButtonSales.UseVisualStyleBackColor = true;
             this.ButtonSales.Visible = false;
@@ -187,10 +197,34 @@
             this.ButtonPurchase.Location = new System.Drawing.Point(3, 178);
             this.ButtonPurchase.Name = "ButtonPurchase";
             this.ButtonPurchase.Size = new System.Drawing.Size(93, 29);
-            this.ButtonPurchase.TabIndex = 0;
+            this.ButtonPurchase.TabIndex = 8;
             this.ButtonPurchase.Text = "Покупки";
             this.ButtonPurchase.UseVisualStyleBackColor = true;
             this.ButtonPurchase.Visible = false;
+            // 
+            // TabsControl
+            // 
+            this.TabsControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabsControl.Location = new System.Drawing.Point(0, 0);
+            this.TabsControl.Name = "TabsControl";
+            this.TabsControl.SelectedIndex = 0;
+            this.TabsControl.Size = new System.Drawing.Size(574, 450);
+            this.TabsControl.TabIndex = 0;
+            this.TabsControl.TabIndexChanged += new System.EventHandler(this.TabsControl_TabIndexChanged);
+            this.TabsControl.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.TabsControl_ControlAdded);
+            this.TabsControl.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.TabsControl_ControlRemoved);
+            // 
+            // ButtonCloseTab
+            // 
+            this.ButtonCloseTab.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonCloseTab.Location = new System.Drawing.Point(553, 0);
+            this.ButtonCloseTab.Name = "ButtonCloseTab";
+            this.ButtonCloseTab.Size = new System.Drawing.Size(20, 20);
+            this.ButtonCloseTab.TabIndex = 2;
+            this.ButtonCloseTab.Text = "X";
+            this.ButtonCloseTab.UseVisualStyleBackColor = true;
+            this.ButtonCloseTab.Visible = false;
+            this.ButtonCloseTab.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ButtonCloseTab_MouseClick);
             // 
             // MainForm
             // 
@@ -201,6 +235,7 @@
             this.Name = "MainForm";
             this.Text = "1C";
             this.SplitContainer.Panel1.ResumeLayout(false);
+            this.SplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).EndInit();
             this.SplitContainer.ResumeLayout(false);
             this.FlowLayoutPanelAccounts.ResumeLayout(false);
@@ -225,6 +260,8 @@
         private System.Windows.Forms.Button ButtonAccountEnter;
         private System.Windows.Forms.Button ButtonAccountRegistration;
         private System.Windows.Forms.Button ButtonAccountExit;
+        private System.Windows.Forms.TabControl TabsControl;
+        private System.Windows.Forms.Button ButtonCloseTab;
     }
 }
 

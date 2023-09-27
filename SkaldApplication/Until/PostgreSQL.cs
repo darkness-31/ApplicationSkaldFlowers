@@ -41,11 +41,7 @@ namespace SkaldApplication.Until
         }
         public static IEnumerable<dynamic> SQLQuery(this string sql, params string[] parametrs)
         {
-            var ase = sql.SQLQuery().AsEnumerable();
-
-            return sql.SQLQuery()
-                .AsEnumerable()
-                .Select(a => a);
+            return default;
         }
         public static async void SQLNoneQuery(this string sql)
         {

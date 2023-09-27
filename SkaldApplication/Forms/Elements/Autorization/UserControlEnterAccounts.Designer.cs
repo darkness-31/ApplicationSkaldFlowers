@@ -48,14 +48,14 @@
             this.TextBoxPassword.Location = new System.Drawing.Point(184, 214);
             this.TextBoxPassword.Name = "TextBoxPassword";
             this.TextBoxPassword.Size = new System.Drawing.Size(184, 20);
-            this.TextBoxPassword.TabIndex = 0;
+            this.TextBoxPassword.TabIndex = 1;
             // 
             // ButtoEntered
             // 
             this.ButtoEntered.Location = new System.Drawing.Point(243, 252);
             this.ButtoEntered.Name = "ButtoEntered";
             this.ButtoEntered.Size = new System.Drawing.Size(77, 32);
-            this.ButtoEntered.TabIndex = 1;
+            this.ButtoEntered.TabIndex = 2;
             this.ButtoEntered.Text = "Войти";
             this.ButtoEntered.UseVisualStyleBackColor = true;
             this.ButtoEntered.Click += new System.EventHandler(this.ButtoEntered_Click);
