@@ -30,7 +30,7 @@
         {
             this.TextBoxLogin = new System.Windows.Forms.TextBox();
             this.LabelLogin = new System.Windows.Forms.Label();
-            this.TextBoxpassword = new System.Windows.Forms.TextBox();
+            this.TextBoxPassword = new System.Windows.Forms.TextBox();
             this.LabelPassword = new System.Windows.Forms.Label();
             this.TextBoxFirstName = new System.Windows.Forms.TextBox();
             this.TextBoxLastName = new System.Windows.Forms.TextBox();
@@ -48,21 +48,21 @@
             this.LabelPassport = new System.Windows.Forms.Label();
             this.TextBoxPassportNums = new System.Windows.Forms.TextBox();
             this.GroupBoxAccount = new System.Windows.Forms.GroupBox();
-            this.LabelPasswordAgain = new System.Windows.Forms.Label();
+            this.LabelWarningPasswords = new System.Windows.Forms.Label();
+            this.LabelWarningLogin = new System.Windows.Forms.Label();
             this.TextBoxPasswordAgain = new System.Windows.Forms.TextBox();
+            this.LabelPasswordAgain = new System.Windows.Forms.Label();
+            this.LabelWarningPasswordAgain = new System.Windows.Forms.Label();
             this.GroupBoxUser = new System.Windows.Forms.GroupBox();
-            this.GroupBoxDocuments = new System.Windows.Forms.GroupBox();
-            this.LabelJob = new System.Windows.Forms.Label();
+            this.LabelWarningSex = new System.Windows.Forms.Label();
+            this.LabelWarningLastName = new System.Windows.Forms.Label();
             this.ComboBoxJob = new System.Windows.Forms.ComboBox();
+            this.LabelJob = new System.Windows.Forms.Label();
+            this.LabelWarningFirstName = new System.Windows.Forms.Label();
+            this.GroupBoxDocuments = new System.Windows.Forms.GroupBox();
+            this.LabelWarningPassport = new System.Windows.Forms.Label();
             this.ButtonRegistration = new System.Windows.Forms.Button();
             this.LabelWarningText = new System.Windows.Forms.Label();
-            this.LabelWarningPassport = new System.Windows.Forms.Label();
-            this.LabelWarningLogin = new System.Windows.Forms.Label();
-            this.LabelWarningPasswords = new System.Windows.Forms.Label();
-            this.LabelWarningPasswordAgain = new System.Windows.Forms.Label();
-            this.LabelWarningFirstName = new System.Windows.Forms.Label();
-            this.LabelWarningLastName = new System.Windows.Forms.Label();
-            this.LabelWarningSex = new System.Windows.Forms.Label();
             this.GroupBoxAccount.SuspendLayout();
             this.GroupBoxUser.SuspendLayout();
             this.GroupBoxDocuments.SuspendLayout();
@@ -74,6 +74,7 @@
             this.TextBoxLogin.Name = "TextBoxLogin";
             this.TextBoxLogin.Size = new System.Drawing.Size(100, 20);
             this.TextBoxLogin.TabIndex = 0;
+            this.TextBoxLogin.Tag = "necessary";
             this.TextBoxLogin.WordWrap = false;
             // 
             // LabelLogin
@@ -85,14 +86,15 @@
             this.LabelLogin.TabIndex = 1;
             this.LabelLogin.Text = "Логин";
             // 
-            // TextBoxpassword
+            // TextBoxPassword
             // 
-            this.TextBoxpassword.Location = new System.Drawing.Point(16, 79);
-            this.TextBoxpassword.Name = "TextBoxpassword";
-            this.TextBoxpassword.PasswordChar = '*';
-            this.TextBoxpassword.Size = new System.Drawing.Size(100, 20);
-            this.TextBoxpassword.TabIndex = 1;
-            this.TextBoxpassword.WordWrap = false;
+            this.TextBoxPassword.Location = new System.Drawing.Point(16, 79);
+            this.TextBoxPassword.Name = "TextBoxPassword";
+            this.TextBoxPassword.PasswordChar = '*';
+            this.TextBoxPassword.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxPassword.TabIndex = 1;
+            this.TextBoxPassword.Tag = "necessary";
+            this.TextBoxPassword.WordWrap = false;
             // 
             // LabelPassword
             // 
@@ -109,6 +111,7 @@
             this.TextBoxFirstName.Name = "TextBoxFirstName";
             this.TextBoxFirstName.Size = new System.Drawing.Size(100, 20);
             this.TextBoxFirstName.TabIndex = 7;
+            this.TextBoxFirstName.Tag = "necessary";
             this.TextBoxFirstName.WordWrap = false;
             // 
             // TextBoxLastName
@@ -117,6 +120,7 @@
             this.TextBoxLastName.Name = "TextBoxLastName";
             this.TextBoxLastName.Size = new System.Drawing.Size(100, 20);
             this.TextBoxLastName.TabIndex = 8;
+            this.TextBoxLastName.Tag = "necessary";
             this.TextBoxLastName.WordWrap = false;
             // 
             // LabelFirstName
@@ -167,6 +171,7 @@
             this.ComboBoxSex.Name = "ComboBoxSex";
             this.ComboBoxSex.Size = new System.Drawing.Size(100, 21);
             this.ComboBoxSex.TabIndex = 10;
+            this.ComboBoxSex.Tag = "necessary";
             this.ComboBoxSex.Text = "Нет";
             // 
             // LabelSex
@@ -221,6 +226,7 @@
             this.TextBoxPassportSeria.Name = "TextBoxPassportSeria";
             this.TextBoxPassportSeria.Size = new System.Drawing.Size(38, 20);
             this.TextBoxPassportSeria.TabIndex = 5;
+            this.TextBoxPassportSeria.Tag = "necessary";
             this.TextBoxPassportSeria.WordWrap = false;
             // 
             // LabelPassport
@@ -239,6 +245,7 @@
             this.TextBoxPassportNums.Name = "TextBoxPassportNums";
             this.TextBoxPassportNums.Size = new System.Drawing.Size(56, 20);
             this.TextBoxPassportNums.TabIndex = 6;
+            this.TextBoxPassportNums.Tag = "necessary";
             this.TextBoxPassportNums.WordWrap = false;
             // 
             // GroupBoxAccount
@@ -248,7 +255,7 @@
             this.GroupBoxAccount.Controls.Add(this.LabelWarningPasswords);
             this.GroupBoxAccount.Controls.Add(this.LabelWarningLogin);
             this.GroupBoxAccount.Controls.Add(this.TextBoxPasswordAgain);
-            this.GroupBoxAccount.Controls.Add(this.TextBoxpassword);
+            this.GroupBoxAccount.Controls.Add(this.TextBoxPassword);
             this.GroupBoxAccount.Controls.Add(this.TextBoxLogin);
             this.GroupBoxAccount.Controls.Add(this.LabelPasswordAgain);
             this.GroupBoxAccount.Controls.Add(this.LabelWarningPasswordAgain);
@@ -259,6 +266,36 @@
             this.GroupBoxAccount.TabStop = false;
             this.GroupBoxAccount.Text = "Аккаунт";
             // 
+            // LabelWarningPasswords
+            // 
+            this.LabelWarningPasswords.AutoSize = true;
+            this.LabelWarningPasswords.ForeColor = System.Drawing.Color.Maroon;
+            this.LabelWarningPasswords.Location = new System.Drawing.Point(32, 63);
+            this.LabelWarningPasswords.Name = "LabelWarningPasswords";
+            this.LabelWarningPasswords.Size = new System.Drawing.Size(11, 13);
+            this.LabelWarningPasswords.TabIndex = 7;
+            this.LabelWarningPasswords.Text = "*";
+            // 
+            // LabelWarningLogin
+            // 
+            this.LabelWarningLogin.AutoSize = true;
+            this.LabelWarningLogin.ForeColor = System.Drawing.Color.Maroon;
+            this.LabelWarningLogin.Location = new System.Drawing.Point(36, 16);
+            this.LabelWarningLogin.Name = "LabelWarningLogin";
+            this.LabelWarningLogin.Size = new System.Drawing.Size(11, 13);
+            this.LabelWarningLogin.TabIndex = 7;
+            this.LabelWarningLogin.Text = "*";
+            // 
+            // TextBoxPasswordAgain
+            // 
+            this.TextBoxPasswordAgain.Location = new System.Drawing.Point(16, 125);
+            this.TextBoxPasswordAgain.Name = "TextBoxPasswordAgain";
+            this.TextBoxPasswordAgain.PasswordChar = '*';
+            this.TextBoxPasswordAgain.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxPasswordAgain.TabIndex = 2;
+            this.TextBoxPasswordAgain.Tag = "necessary";
+            this.TextBoxPasswordAgain.WordWrap = false;
+            // 
             // LabelPasswordAgain
             // 
             this.LabelPasswordAgain.AutoSize = true;
@@ -268,14 +305,15 @@
             this.LabelPasswordAgain.TabIndex = 1;
             this.LabelPasswordAgain.Text = "Повторить пароль";
             // 
-            // TextBoxPasswordAgain
+            // LabelWarningPasswordAgain
             // 
-            this.TextBoxPasswordAgain.Location = new System.Drawing.Point(16, 125);
-            this.TextBoxPasswordAgain.Name = "TextBoxPasswordAgain";
-            this.TextBoxPasswordAgain.PasswordChar = '*';
-            this.TextBoxPasswordAgain.Size = new System.Drawing.Size(100, 20);
-            this.TextBoxPasswordAgain.TabIndex = 2;
-            this.TextBoxPasswordAgain.WordWrap = false;
+            this.LabelWarningPasswordAgain.AutoSize = true;
+            this.LabelWarningPasswordAgain.ForeColor = System.Drawing.Color.Maroon;
+            this.LabelWarningPasswordAgain.Location = new System.Drawing.Point(9, 109);
+            this.LabelWarningPasswordAgain.Name = "LabelWarningPasswordAgain";
+            this.LabelWarningPasswordAgain.Size = new System.Drawing.Size(11, 13);
+            this.LabelWarningPasswordAgain.TabIndex = 7;
+            this.LabelWarningPasswordAgain.Text = "*";
             // 
             // GroupBoxUser
             // 
@@ -299,6 +337,60 @@
             this.GroupBoxUser.TabStop = false;
             this.GroupBoxUser.Text = "Пользователь";
             // 
+            // LabelWarningSex
+            // 
+            this.LabelWarningSex.AutoSize = true;
+            this.LabelWarningSex.ForeColor = System.Drawing.Color.Maroon;
+            this.LabelWarningSex.Location = new System.Drawing.Point(7, 170);
+            this.LabelWarningSex.Name = "LabelWarningSex";
+            this.LabelWarningSex.Size = new System.Drawing.Size(11, 13);
+            this.LabelWarningSex.TabIndex = 7;
+            this.LabelWarningSex.Text = "*";
+            // 
+            // LabelWarningLastName
+            // 
+            this.LabelWarningLastName.AutoSize = true;
+            this.LabelWarningLastName.ForeColor = System.Drawing.Color.Maroon;
+            this.LabelWarningLastName.Location = new System.Drawing.Point(7, 70);
+            this.LabelWarningLastName.Name = "LabelWarningLastName";
+            this.LabelWarningLastName.Size = new System.Drawing.Size(11, 13);
+            this.LabelWarningLastName.TabIndex = 7;
+            this.LabelWarningLastName.Text = "*";
+            // 
+            // ComboBoxJob
+            // 
+            this.ComboBoxJob.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ComboBoxJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboBoxJob.FormattingEnabled = true;
+            this.ComboBoxJob.Items.AddRange(new object[] {
+            "Нет",
+            "Мужчина",
+            "Женщина"});
+            this.ComboBoxJob.Location = new System.Drawing.Point(15, 232);
+            this.ComboBoxJob.Name = "ComboBoxJob";
+            this.ComboBoxJob.Size = new System.Drawing.Size(100, 21);
+            this.ComboBoxJob.TabIndex = 11;
+            this.ComboBoxJob.Text = "Нет";
+            // 
+            // LabelJob
+            // 
+            this.LabelJob.AutoSize = true;
+            this.LabelJob.Location = new System.Drawing.Point(15, 216);
+            this.LabelJob.Name = "LabelJob";
+            this.LabelJob.Size = new System.Drawing.Size(65, 13);
+            this.LabelJob.TabIndex = 1;
+            this.LabelJob.Text = "Должность";
+            // 
+            // LabelWarningFirstName
+            // 
+            this.LabelWarningFirstName.AutoSize = true;
+            this.LabelWarningFirstName.ForeColor = System.Drawing.Color.Maroon;
+            this.LabelWarningFirstName.Location = new System.Drawing.Point(9, 23);
+            this.LabelWarningFirstName.Name = "LabelWarningFirstName";
+            this.LabelWarningFirstName.Size = new System.Drawing.Size(11, 13);
+            this.LabelWarningFirstName.TabIndex = 7;
+            this.LabelWarningFirstName.Text = "*";
+            // 
             // GroupBoxDocuments
             // 
             this.GroupBoxDocuments.Controls.Add(this.TextBoxInn);
@@ -316,37 +408,23 @@
             this.GroupBoxDocuments.TabStop = false;
             this.GroupBoxDocuments.Text = "Документы";
             // 
-            // LabelJob
+            // LabelWarningPassport
             // 
-            this.LabelJob.AutoSize = true;
-            this.LabelJob.Location = new System.Drawing.Point(15, 216);
-            this.LabelJob.Name = "LabelJob";
-            this.LabelJob.Size = new System.Drawing.Size(65, 13);
-            this.LabelJob.TabIndex = 1;
-            this.LabelJob.Text = "Должность";
-            // 
-            // ComboBoxJob
-            // 
-            this.ComboBoxJob.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ComboBoxJob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ComboBoxJob.FormattingEnabled = true;
-            this.ComboBoxJob.Items.AddRange(new object[] {
-            "Нет",
-            "Мужчина",
-            "Женщина"});
-            this.ComboBoxJob.Location = new System.Drawing.Point(15, 232);
-            this.ComboBoxJob.Name = "ComboBoxJob";
-            this.ComboBoxJob.Size = new System.Drawing.Size(100, 21);
-            this.ComboBoxJob.TabIndex = 11;
-            this.ComboBoxJob.Text = "Нет";
+            this.LabelWarningPassport.AutoSize = true;
+            this.LabelWarningPassport.ForeColor = System.Drawing.Color.Maroon;
+            this.LabelWarningPassport.Location = new System.Drawing.Point(9, 130);
+            this.LabelWarningPassport.Name = "LabelWarningPassport";
+            this.LabelWarningPassport.Size = new System.Drawing.Size(11, 13);
+            this.LabelWarningPassport.TabIndex = 7;
+            this.LabelWarningPassport.Text = "*";
             // 
             // ButtonRegistration
             // 
             this.ButtonRegistration.Location = new System.Drawing.Point(288, 344);
             this.ButtonRegistration.Name = "ButtonRegistration";
-            this.ButtonRegistration.Size = new System.Drawing.Size(134, 30);
+            this.ButtonRegistration.Size = new System.Drawing.Size(134, 24);
             this.ButtonRegistration.TabIndex = 12;
-            this.ButtonRegistration.Text = "Зарегестрироваться";
+            this.ButtonRegistration.Text = "Зарегистрироваться";
             this.ButtonRegistration.UseVisualStyleBackColor = true;
             // 
             // LabelWarningText
@@ -359,76 +437,6 @@
             this.LabelWarningText.TabIndex = 7;
             this.LabelWarningText.Text = "* - обязательное поле";
             // 
-            // LabelWarningPassport
-            // 
-            this.LabelWarningPassport.AutoSize = true;
-            this.LabelWarningPassport.ForeColor = System.Drawing.Color.Maroon;
-            this.LabelWarningPassport.Location = new System.Drawing.Point(9, 130);
-            this.LabelWarningPassport.Name = "LabelWarningPassport";
-            this.LabelWarningPassport.Size = new System.Drawing.Size(11, 13);
-            this.LabelWarningPassport.TabIndex = 7;
-            this.LabelWarningPassport.Text = "*";
-            // 
-            // LabelWarningLogin
-            // 
-            this.LabelWarningLogin.AutoSize = true;
-            this.LabelWarningLogin.ForeColor = System.Drawing.Color.Maroon;
-            this.LabelWarningLogin.Location = new System.Drawing.Point(36, 16);
-            this.LabelWarningLogin.Name = "LabelWarningLogin";
-            this.LabelWarningLogin.Size = new System.Drawing.Size(11, 13);
-            this.LabelWarningLogin.TabIndex = 7;
-            this.LabelWarningLogin.Text = "*";
-            // 
-            // LabelWarningPasswords
-            // 
-            this.LabelWarningPasswords.AutoSize = true;
-            this.LabelWarningPasswords.ForeColor = System.Drawing.Color.Maroon;
-            this.LabelWarningPasswords.Location = new System.Drawing.Point(32, 63);
-            this.LabelWarningPasswords.Name = "LabelWarningPasswords";
-            this.LabelWarningPasswords.Size = new System.Drawing.Size(11, 13);
-            this.LabelWarningPasswords.TabIndex = 7;
-            this.LabelWarningPasswords.Text = "*";
-            // 
-            // LabelWarningPasswordAgain
-            // 
-            this.LabelWarningPasswordAgain.AutoSize = true;
-            this.LabelWarningPasswordAgain.ForeColor = System.Drawing.Color.Maroon;
-            this.LabelWarningPasswordAgain.Location = new System.Drawing.Point(9, 109);
-            this.LabelWarningPasswordAgain.Name = "LabelWarningPasswordAgain";
-            this.LabelWarningPasswordAgain.Size = new System.Drawing.Size(11, 13);
-            this.LabelWarningPasswordAgain.TabIndex = 7;
-            this.LabelWarningPasswordAgain.Text = "*";
-            // 
-            // LabelWarningFirstName
-            // 
-            this.LabelWarningFirstName.AutoSize = true;
-            this.LabelWarningFirstName.ForeColor = System.Drawing.Color.Maroon;
-            this.LabelWarningFirstName.Location = new System.Drawing.Point(9, 23);
-            this.LabelWarningFirstName.Name = "LabelWarningFirstName";
-            this.LabelWarningFirstName.Size = new System.Drawing.Size(11, 13);
-            this.LabelWarningFirstName.TabIndex = 7;
-            this.LabelWarningFirstName.Text = "*";
-            // 
-            // LabelWarningLastName
-            // 
-            this.LabelWarningLastName.AutoSize = true;
-            this.LabelWarningLastName.ForeColor = System.Drawing.Color.Maroon;
-            this.LabelWarningLastName.Location = new System.Drawing.Point(7, 70);
-            this.LabelWarningLastName.Name = "LabelWarningLastName";
-            this.LabelWarningLastName.Size = new System.Drawing.Size(11, 13);
-            this.LabelWarningLastName.TabIndex = 7;
-            this.LabelWarningLastName.Text = "*";
-            // 
-            // LabelWarningSex
-            // 
-            this.LabelWarningSex.AutoSize = true;
-            this.LabelWarningSex.ForeColor = System.Drawing.Color.Maroon;
-            this.LabelWarningSex.Location = new System.Drawing.Point(7, 170);
-            this.LabelWarningSex.Name = "LabelWarningSex";
-            this.LabelWarningSex.Size = new System.Drawing.Size(11, 13);
-            this.LabelWarningSex.TabIndex = 7;
-            this.LabelWarningSex.Text = "*";
-            // 
             // UserControlRegistrationAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,7 +448,7 @@
             this.Controls.Add(this.GroupBoxAccount);
             this.Name = "UserControlRegistrationAccounts";
             this.Size = new System.Drawing.Size(574, 450);
-            this.Load += new System.EventHandler(this.UserControlRegistrationAccounts_Load);
+            this.Tag = "";
             this.GroupBoxAccount.ResumeLayout(false);
             this.GroupBoxAccount.PerformLayout();
             this.GroupBoxUser.ResumeLayout(false);
@@ -456,7 +464,7 @@
 
         private System.Windows.Forms.TextBox TextBoxLogin;
         private System.Windows.Forms.Label LabelLogin;
-        private System.Windows.Forms.TextBox TextBoxpassword;
+        private System.Windows.Forms.TextBox TextBoxPassword;
         private System.Windows.Forms.Label LabelPassword;
         private System.Windows.Forms.TextBox TextBoxFirstName;
         private System.Windows.Forms.TextBox TextBoxLastName;

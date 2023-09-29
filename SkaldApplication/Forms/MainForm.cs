@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SkaldApplication.Data.Authorization;
 using SkaldApplication.Forms.Elements;
 using SkaldApplication.Forms.Elements.Autorization;
 
@@ -14,11 +15,9 @@ namespace SkaldApplication
 {
     public partial class MainForm : Form
     {
-        public MainForm()
-        {
-            InitializeComponent();
+        AccountUser AccountUser { get; set; }
 
-        }
+        public MainForm() => InitializeComponent();
         private void CheckTab(TabPage tabPage)
         {
             if (TabsControl.TabCount != 0)
@@ -40,6 +39,12 @@ namespace SkaldApplication
             tabPage.Name = ucea.Name;
             tabPage.Text = "Вход";
 
+            ucea.EnteredAccountHandler += (AccountUser account) =>
+            {
+                TabsControl.TabPages.Clear();
+                AccountUser = account;
+            };
+
             CheckTab(tabPage);
         }
 
@@ -55,15 +60,7 @@ namespace SkaldApplication
             CheckTab(tabPage);
         }
 
-        private void TabsControl_MouseClick(object sender, MouseEventArgs e)
-        {
 
-        }
-
-        private void TabsControl_TabIndexChanged(object sender, EventArgs e)
-        {
-            Console.WriteLine();
-        }
 
         private void TabsControl_ControlAdded(object sender, ControlEventArgs e)
         {

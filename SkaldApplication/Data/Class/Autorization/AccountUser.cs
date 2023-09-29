@@ -6,14 +6,20 @@ using System.Threading.Tasks;
 using SkaldApplication.Data.Enums;
 using SkaldApplication.Until;
 
-namespace SkaldApplication.Data.Class
+namespace SkaldApplication.Data.Authorization
 {
-    internal class AccountUser : IDisposable
+    /// <summary>
+    /// Аккаунт пользователя
+    /// </summary>
+    internal partial class AccountUser : IDisposable
     {
         private string _Login { get; set; }
         private string _Password { get; set; }
         private AccountAccess _Access { get; set; }
 
+        /// <summary>
+        /// Логин для входа
+        /// </summary>
         public string Login 
         { 
             get 
@@ -32,6 +38,9 @@ namespace SkaldApplication.Data.Class
                 _Login = value;
             }
         }
+        /// <summary>
+        /// Пароль для входа
+        /// </summary>
         public string Password 
         { 
             get
@@ -49,27 +58,6 @@ namespace SkaldApplication.Data.Class
 
                 _Password = value;
             } 
-        }
-
-        public AccountAccess GetAccess()
-        {
-            var sql = $@"SELECT a.id_spr_access
-                        FROM spr_account AS a
-                        WHERE a.login = '{_Login}' AND 
-                        	   a.PASSWORD = '{_Password}'";
-
-            var value = sql.SQLQuery().Rows[0][0];
-            if (value is null)
-                return AccountAccess.Anonim;
-
-            return (AccountAccess)value;
-        }
-
-        public void Dispose()
-        {
-            _Login = string.Empty;
-            _Password = string.Empty;
-            _Access = AccountAccess.Anonim;
         }
     }
 }

@@ -38,23 +38,23 @@
             // 
             // TextBoxLogin
             // 
-            this.TextBoxLogin.Location = new System.Drawing.Point(184, 162);
+            this.TextBoxLogin.Location = new System.Drawing.Point(204, 157);
             this.TextBoxLogin.Name = "TextBoxLogin";
-            this.TextBoxLogin.Size = new System.Drawing.Size(184, 20);
+            this.TextBoxLogin.Size = new System.Drawing.Size(126, 20);
             this.TextBoxLogin.TabIndex = 0;
             // 
             // TextBoxPassword
             // 
-            this.TextBoxPassword.Location = new System.Drawing.Point(184, 214);
+            this.TextBoxPassword.Location = new System.Drawing.Point(204, 211);
             this.TextBoxPassword.Name = "TextBoxPassword";
-            this.TextBoxPassword.Size = new System.Drawing.Size(184, 20);
+            this.TextBoxPassword.Size = new System.Drawing.Size(126, 20);
             this.TextBoxPassword.TabIndex = 1;
             // 
             // ButtoEntered
             // 
-            this.ButtoEntered.Location = new System.Drawing.Point(243, 252);
+            this.ButtoEntered.Location = new System.Drawing.Point(234, 250);
             this.ButtoEntered.Name = "ButtoEntered";
-            this.ButtoEntered.Size = new System.Drawing.Size(77, 32);
+            this.ButtoEntered.Size = new System.Drawing.Size(66, 23);
             this.ButtoEntered.TabIndex = 2;
             this.ButtoEntered.Text = "Войти";
             this.ButtoEntered.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(252, 141);
+            this.label1.Location = new System.Drawing.Point(245, 141);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 2;
@@ -72,7 +72,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(252, 195);
+            this.label2.Location = new System.Drawing.Point(243, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             this.LabelError.AutoSize = true;
             this.LabelError.ForeColor = System.Drawing.Color.DarkRed;
-            this.LabelError.Location = new System.Drawing.Point(181, 94);
+            this.LabelError.Location = new System.Drawing.Point(210, 305);
             this.LabelError.Name = "LabelError";
             this.LabelError.Size = new System.Drawing.Size(0, 13);
             this.LabelError.TabIndex = 3;

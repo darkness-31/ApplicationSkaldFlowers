@@ -35,7 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Data\Class\AccountUser.cs" />
+    <Compile Include="Data\Class\Autorization\AccountUser.cs" />
+    <Compile Include="Data\Methods\Autorization\AccountUser.cs" />
+    <Compile Include="Data\Methods\Autorization\RegistrationUser.cs" />
+    <Compile Include="Data\Class\Autorization\RegistrationUser.cs" />
     <Compile Include="Data\Enums\AccountAccess.cs" />
     <Compile Include="Forms\Elements\Autorization\UserControlEnterAccounts.cs">
       <SubType>UserControl</SubType>

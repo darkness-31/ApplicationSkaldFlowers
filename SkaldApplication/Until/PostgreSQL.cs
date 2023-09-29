@@ -32,7 +32,7 @@ namespace SkaldApplication.Until
         public static async void Open() => await _DB.OpenAsync();
         public static async void Close() => await _DB.CloseAsync();
 
-        public static DataTable SQLQuery(this string sql)
+        public static DataTable SQLQueryAsDataTable(this string sql)
         {
             NpgsqlDataAdapter command = new NpgsqlDataAdapter(sql, _DB);
             DataTable dt = new DataTable();
@@ -41,8 +41,22 @@ namespace SkaldApplication.Until
         }
         public static IEnumerable<dynamic> SQLQuery(this string sql, params string[] parametrs)
         {
-            return default;
+            Dictionary<int, dynamic> dct = new Dictionary<int, dynamic>();
+            var dt = sql.SQLQueryAsDataTable();
+
+            if (dt.Rows.Count == 0) return default;
+            dynamic list = new { };
+            foreach(DataRow row in dt.Rows)
+            {
+                foreach(string param in parametrs)
+                {
+                    //list.Add(row[param]);
+                }
+            }
+
+            return list;
         }
+
         public static async void SQLNoneQuery(this string sql)
         {
             NpgsqlCommand command = new NpgsqlCommand(sql, _DB);

@@ -41,8 +41,8 @@
             this.ButtonAccounts = new System.Windows.Forms.Button();
             this.ButtonSales = new System.Windows.Forms.Button();
             this.ButtonPurchase = new System.Windows.Forms.Button();
-            this.TabsControl = new System.Windows.Forms.TabControl();
             this.ButtonCloseTab = new System.Windows.Forms.Button();
+            this.TabsControl = new System.Windows.Forms.TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer)).BeginInit();
             this.SplitContainer.Panel1.SuspendLayout();
             this.SplitContainer.Panel2.SuspendLayout();
@@ -202,18 +202,6 @@
             this.ButtonPurchase.UseVisualStyleBackColor = true;
             this.ButtonPurchase.Visible = false;
             // 
-            // TabsControl
-            // 
-            this.TabsControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabsControl.Location = new System.Drawing.Point(0, 0);
-            this.TabsControl.Name = "TabsControl";
-            this.TabsControl.SelectedIndex = 0;
-            this.TabsControl.Size = new System.Drawing.Size(574, 450);
-            this.TabsControl.TabIndex = 0;
-            this.TabsControl.TabIndexChanged += new System.EventHandler(this.TabsControl_TabIndexChanged);
-            this.TabsControl.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.TabsControl_ControlAdded);
-            this.TabsControl.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.TabsControl_ControlRemoved);
-            // 
             // ButtonCloseTab
             // 
             this.ButtonCloseTab.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -225,6 +213,17 @@
             this.ButtonCloseTab.UseVisualStyleBackColor = true;
             this.ButtonCloseTab.Visible = false;
             this.ButtonCloseTab.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ButtonCloseTab_MouseClick);
+            // 
+            // TabsControl
+            // 
+            this.TabsControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabsControl.Location = new System.Drawing.Point(0, 0);
+            this.TabsControl.Name = "TabsControl";
+            this.TabsControl.SelectedIndex = 0;
+            this.TabsControl.Size = new System.Drawing.Size(574, 450);
+            this.TabsControl.TabIndex = 0;
+            this.TabsControl.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.TabsControl_ControlAdded);
+            this.TabsControl.ControlRemoved += new System.Windows.Forms.ControlEventHandler(this.TabsControl_ControlRemoved);
             // 
             // MainForm
             // 
